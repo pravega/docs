@@ -1,0 +1,6 @@
+[submodule "pravega"]
+	path = pravega
+	url = https://github.com/claudiofahey/pravega
+[submodule "flink-connectors"]
+	path = flink-connectors
+	url = https://github.com/claudiofahey/flink-connectors
