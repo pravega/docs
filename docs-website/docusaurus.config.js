@@ -29,6 +29,10 @@ module.exports = {
   },
   themeConfig: {
     navbar: {
+      logo: {
+        alt: 'Pravega Logo',
+        src: 'img/logo.png',
+      },
       items: [
         {
           to: '/',
