@@ -87,7 +87,7 @@ For complex editing tasks, it is recommended to use an IDE such as Visual Studio
             yarn install
             yarn run start -p 7071 -h 0.0.0.0 --no-open
 
-   3. Open your browser to http://localhost:7071.
+   3. Open your browser to http://localhost:7071/pravega/index.
       Usually, any changes made to the Markdown files will be displayed in your browser in about one second.
       However, sometimes the automatic update doesn't work and you'll have to repeat steps 2 to 3.
 
