@@ -3,14 +3,13 @@ var path = require('path');
 
 // Define the mapping from the docPath prefix to the Github edit URL.
 // This must be consistent with sidebars.js, Git submodules, and soft links.
-// This is updated by docusaurus-internal.config.js.
 var editUrlMap = {
   'flink-connectors/': 'https://github.com/claudiofahey/flink-connectors/edit/docusaurus/documentation/src/docs/',
   'pravega/': 'https://github.com/claudiofahey/pravega/edit/docusaurus/documentation/src/docs/',
 };
 
 module.exports = {
-  title: 'Pravega Documentation', // Overridden by docusaurus-internal.config.js
+  title: 'Pravega Documentation',
   url: 'https://www.pravega.io/',
   baseUrl: '/',
   onBrokenLinks: 'warn', // TODO: change to 'throw'
@@ -28,6 +27,7 @@ module.exports = {
     }
   },
   themeConfig: {
+    hideableSidebar: true,
     navbar: {
       logo: {
         alt: 'Pravega Logo',

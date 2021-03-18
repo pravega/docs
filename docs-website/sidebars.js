@@ -1,4 +1,4 @@
-// This builds the consolidated navigation sidebars for all of SDP.
+// This builds the consolidated navigation sidebars for the Pravega ecosystem.
 // It combines the sidebars for all components.
 
 // Apply a function to the entries of an object.
@@ -41,5 +41,4 @@ module.exports = {
       { type: 'link', label: 'Kafka Adapter', href: 'https://github.com/pravega/kafka-adapter' },
     ],
   },
-  addPrefixToDocumentId,  // Exported for sidebars-internal.js.
 };
