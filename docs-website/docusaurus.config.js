@@ -1,29 +1,45 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 var path = require('path');
 
+const baseUrl = process.env.BASE_URL || '/';
+
 // Define the mapping from the docPath prefix to the Github edit URL.
 // This must be consistent with sidebars.js, Git submodules, and soft links.
 var editUrlMap = {
-  'flink-connectors/': 'https://github.com/claudiofahey/flink-connectors/edit/docusaurus/documentation/src/docs/',
-  'pravega/': 'https://github.com/claudiofahey/pravega/edit/docusaurus/documentation/src/docs/',
+  'flink-connectors/': 'https://github.com/pravega/flink-connectors/edit/docusaurus/documentation/src/docs/',
+  'spark-connectors/': 'https://github.com/pravega/spark-connectors/edit/docusaurus/documentation/src/docs/',
+  'pravega/': 'https://github.com/pravega/pravega/edit/docusaurus/documentation/src/docs/',
 };
 
 module.exports = {
   title: 'Pravega Documentation',
-  url: 'https://www.pravega.io/',
-  baseUrl: '/',
+  url: 'https://pravega.io/',
+  baseUrl: baseUrl,
   onBrokenLinks: 'warn', // TODO: change to 'throw'
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'pravega', // GitHub org/user name.
   projectName: 'pravega', // GitHub repo name.
-  plugins: [path.resolve('nautilus-plugin')],
+  plugins: [
+    path.resolve('nautilus-plugin'),
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            from: ['/'],
+            to: 'pravega/overview'
+          }
+        ]
+      }
+    ]
+  ],
   customFields: {
     editUrlMap: editUrlMap,
     // Feature flags used by if_have_feature.js.
     features: [],
     versions: {
-      pravega: '0.9',
+      pravega: '0.10',
     }
   },
   themeConfig: {
@@ -35,7 +51,7 @@ module.exports = {
       },
       items: [
         {
-          to: '/',
+          to: '/pravega/overview',
           activeBasePath: 'docs',
           label: 'Docs',
           position: 'left',

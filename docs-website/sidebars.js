@@ -28,13 +28,14 @@ function addPrefixToDocumentId(obj, prefix) {
 
 pravegaSidebars = require('./docs/pravega/sidebars.js');
 flinkConnectorsSidebars = require('./docs/flink-connectors/sidebars.js');
+sparkConnectorsSidebars = require('./docs/spark-connectors/sidebars.js');
 
 module.exports = {
   mainSidebar: {
     Pravega: addPrefixToDocumentId(pravegaSidebars.mainSidebar, 'pravega/'),
     Connectors: [
       { Flink: addPrefixToDocumentId(flinkConnectorsSidebars.mainSidebar, 'flink-connectors/') },
-      { type: 'link', label: 'Spark', href: 'https://github.com/pravega/spark-connectors' },
+      { Spark: addPrefixToDocumentId(sparkConnectorsSidebars.mainSidebar, 'spark-connectors/') },
       { type: 'link', label: 'NiFi', href: 'https://github.com/pravega/nifi-pravega' },
       { type: 'link', label: 'Logstash', href: 'https://github.com/pravega?q=logstash' },
       { type: 'link', label: 'Boomi', href: 'https://github.com/pravega/boomi-connector' },
