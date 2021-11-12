@@ -28,7 +28,7 @@ module.exports = {
         redirects: [
           {
             from: ['/'],
-            to: 'pravega/overview'
+            to: '/pravega/overview'
           }
         ]
       }
@@ -40,6 +40,7 @@ module.exports = {
     features: [],
     versions: {
       pravega: '0.10',
+      'pravega-operator': 'v0.5.5',
     }
   },
   themeConfig: {

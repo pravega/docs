@@ -29,10 +29,14 @@ function addPrefixToDocumentId(obj, prefix) {
 pravegaSidebars = require('./docs/pravega/sidebars.js');
 flinkConnectorsSidebars = require('./docs/flink-connectors/sidebars.js');
 sparkConnectorsSidebars = require('./docs/spark-connectors/sidebars.js');
+pravegaOperatorSidebars = require('./docs/pravega-operator/sidebars.js');
+schemaRegistrySidebars = require('./docs/schema-registry/sidebars.js');
 
 module.exports = {
   mainSidebar: {
     Pravega: addPrefixToDocumentId(pravegaSidebars.mainSidebar, 'pravega/'),
+    'Pravega Operator': addPrefixToDocumentId(pravegaOperatorSidebars.mainSidebar, 'pravega-operator/'),
+    'Schema Registry': addPrefixToDocumentId(schemaRegistrySidebars.mainSidebar, 'schema-registry/'),
     Connectors: [
       { Flink: addPrefixToDocumentId(flinkConnectorsSidebars.mainSidebar, 'flink-connectors/') },
       { Spark: addPrefixToDocumentId(sparkConnectorsSidebars.mainSidebar, 'spark-connectors/') },
