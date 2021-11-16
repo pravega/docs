@@ -109,6 +109,9 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Pravega`,
     },
+    prism: {
+      additionalLanguages: ['groovy', 'java'],
+    }
   },
   presets: [
     [
